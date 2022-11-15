@@ -25,18 +25,24 @@
         <div class="logo">
             <img class="img-logo" src="img/logo.png" alt="Logo Boolean">
         </div>
-        <form>
-            <input type="text" placeholder="Inserisci testo to do" required>
-            <button type="submit">Aggiungi</button>
+        <form class="add-task">
+            <input id="task-input" class="component-shape" type="text" placeholder="Inserisci testo to do" required minlength="4">
+            <button id="add-btn" class="component-shape" type="submit">Aggiungi</button>
         </form>
         <div class="tasks-container">
-            <ul>
+            <ul class="task-list">
                 <li class="task">
                     Fare i compiti
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-xmark ft-20"></i>
                 </li>
-                <li>Fare la spesa</li>
-                <li>Andare dalla nonna</li>
+                <li class="task">
+                    Fare la spesa
+                    <i class="fa-solid fa-xmark ft-20"></i>
+                </li>
+                <li class="task">
+                    Andare dalla nonna
+                    <i class="fa-solid fa-xmark ft-20"></i>
+                </li>
             </ul>
         </div>
     </div>

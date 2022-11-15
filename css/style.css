@@ -13,9 +13,11 @@
 body {
     font-family: 'Lato', sans-serif;
 }
-
+.ft-20 {
+    font-size: 1.25rem;
+}
 /*------------------
-    MAIN
+    COMMON
 -------------------*/
 body {
     display: flex;
@@ -30,7 +32,55 @@ body {
     align-items: center;
     padding: 1.25rem;
 }
+
+/*------------------
+    LOGO
+-------------------*/
+.logo {
+    margin-bottom: 1.25rem;
+}
 .img-logo {
     max-height: 4.375rem;
     height: 100%;
+}
+
+/*------------------
+    FORM
+-------------------*/
+.add-task {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+.component-shape {
+    padding: .75rem 1rem;
+    border-radius: .625rem;
+    border: 1px solid black;
+}
+#task-input {
+    width: 75%;
+}
+#add-btn {
+    width: 22%;
+}
+
+/*------------------
+    TASKS CONTAINER
+-------------------*/
+.tasks-container {
+    width: 100%;
+    padding: 1.875rem;
+    background-color: #f3f6f6;
+    border-radius: .625rem;
+}
+.task-list {
+    list-style: none;
+}
+.task-list .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+    border-bottom: 1px solid #d5d9dd;
 }
