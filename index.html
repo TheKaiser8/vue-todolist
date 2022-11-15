@@ -21,8 +21,24 @@
 </head>
 
 <body>
-    <div id="app">
-
+    <div id="app" class="container">
+        <div class="logo">
+            <img class="img-logo" src="img/logo.png" alt="Logo Boolean">
+        </div>
+        <form>
+            <input type="text" placeholder="Inserisci testo to do" required>
+            <button type="submit">Aggiungi</button>
+        </form>
+        <div class="tasks-container">
+            <ul>
+                <li class="task">
+                    Fare i compiti
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
+                <li>Fare la spesa</li>
+                <li>Andare dalla nonna</li>
+            </ul>
+        </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
