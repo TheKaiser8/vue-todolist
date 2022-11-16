@@ -25,8 +25,8 @@
         <div class="logo">
             <img class="img-logo" src="img/logo.png" alt="Logo Boolean">
         </div>
-        <form class="add-task">
-            <input id="task-input" class="component-shape" type="text" placeholder="Inserisci testo to do" required minlength="4">
+        <form class="add-task" @submit.prevent="addTodo">
+            <input id="task-input" class="component-shape" type="text" placeholder="Inserisci testo to do" v-model="newTodo" required minlength="4">
             <button id="add-btn" class="component-shape" type="submit">Aggiungi</button>
         </form>
         <div class="tasks-container">

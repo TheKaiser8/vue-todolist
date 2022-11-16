@@ -22,6 +22,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newTodo: '',
             todoList: [
                 {
                     text: 'Fare i compiti',
@@ -41,6 +42,15 @@ createApp({
     methods: {
         removeTodo(i) {
             this.todoList.splice(i, 1);
+        },
+        addTodo() {
+            console.log(this.newTodo);
+            const todoAdded = {
+                text: this.newTodo,
+                done: false
+            }
+            this.todoList.push(todoAdded);
+            this.newTodo = '';
         }
     }
 }).mount('#app');
