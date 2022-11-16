@@ -30,20 +30,13 @@
             <button id="add-btn" class="component-shape" type="submit">Aggiungi</button>
         </form>
         <div class="tasks-container">
-            <ul class="task-list">
-                <li class="task" v-for="todo in todoList" >
+            <ul class="task-list" v-if="todoList.length > 0">
+                <li class="task" v-for="(todo, index) in todoList">
                     <span :class="{ 'line-through': todo.done === true }">{{ todo.text }}</span>
-                    <i class="fa-solid fa-xmark ft-20"></i>
+                    <i class="fa-solid fa-xmark ft-20" @click="removeTodo(index)"></i>
                 </li>
-                <!-- <li class="task">
-                    Fare la spesa
-                    <i class="fa-solid fa-xmark ft-20"></i>
-                </li>
-                <li class="task">
-                    Andare dalla nonna
-                    <i class="fa-solid fa-xmark ft-20"></i>
-                </li> -->
             </ul>
+            <h3 v-else>Nessun "to do" presente in lista. C'è sempre qualcosa da fare, non fare il pigro!</h3>
         </div>
     </div>
     <script src="./js/script.js"></script>

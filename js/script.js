@@ -38,4 +38,9 @@ createApp({
             ]
         }
     },
+    methods: {
+        removeTodo(i) {
+            this.todoList.splice(i, 1);
+        }
+    }
 }).mount('#app');
