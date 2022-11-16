@@ -44,13 +44,19 @@ createApp({
             this.todoList.splice(i, 1);
         },
         addTodo() {
-            console.log(this.newTodo);
             const todoAdded = {
                 text: this.newTodo,
                 done: false
             }
             this.todoList.push(todoAdded);
             this.newTodo = '';
+        },
+        todoDone(i) {
+            if( this.todoList[i].done === false ) {
+                this.todoList[i].done === true;
+            } else {
+                this.todoList[i].done === false;
+            }
         }
     }
 }).mount('#app');

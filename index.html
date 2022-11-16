@@ -32,7 +32,7 @@
         <div class="tasks-container">
             <ul class="task-list" v-if="todoList.length > 0">
                 <li class="task" v-for="(todo, index) in todoList">
-                    <span :class="{ 'line-through': todo.done === true }">{{ todo.text }}</span>
+                    <span :class="{ 'line-through': todo.done === true }" @click="todoDone(index)">{{ todo.text }}</span>
                     <i class="fa-solid fa-xmark ft-20" @click="removeTodo(index)"></i>
                 </li>
             </ul>
