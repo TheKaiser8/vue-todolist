@@ -31,18 +31,18 @@
         </form>
         <div class="tasks-container">
             <ul class="task-list">
-                <li class="task">
-                    Fare i compiti
+                <li class="task" v-for="todo in todoList" >
+                    <span :class="{ 'line-through': todo.done === true }">{{ todo.text }}</span>
                     <i class="fa-solid fa-xmark ft-20"></i>
                 </li>
-                <li class="task">
+                <!-- <li class="task">
                     Fare la spesa
                     <i class="fa-solid fa-xmark ft-20"></i>
                 </li>
                 <li class="task">
                     Andare dalla nonna
                     <i class="fa-solid fa-xmark ft-20"></i>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
