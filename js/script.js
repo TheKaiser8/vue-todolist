@@ -51,7 +51,7 @@ createApp({
             this.todoList.push(todoAdded);
             this.newTodo = '';
         },
-        todoDone(i) {
+        onClickTodo(i) {
             if( this.todoList[i].done === false ) {
                 this.todoList[i].done = true;
             } else {
