@@ -53,9 +53,9 @@ createApp({
         },
         todoDone(i) {
             if( this.todoList[i].done === false ) {
-                this.todoList[i].done === true;
+                this.todoList[i].done = true;
             } else {
-                this.todoList[i].done === false;
+                this.todoList[i].done = false;
             }
         }
     }
